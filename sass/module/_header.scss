@@ -1,0 +1,124 @@
+@import "settings";
+
+.ly_header {
+	padding-top: 20px;
+	// border-bottom: 1px solid #ddd;
+	// position: fixed;
+	z-index: 100;
+	background-color: #f3f3f3;
+	width: 100%;
+	top: 0;
+	// box-shadow:  0 1px 2px;
+  }
+
+
+
+  
+  .ly_header_inner {
+	max-width: 1640px;
+	padding-right: 40px;
+	padding-left: 25px;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  
+  .bl_headerUtils {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+  }
+  
+  .bl_headerUtils_logo {
+	width: 150px;
+	margin: 0 auto;
+  }
+  
+  .bl_headerUtils .el_btn {
+	width: auto;
+	padding: 10px 20px;
+	box-shadow: none;
+  }
+  
+  .bl_headerNav {
+	// display: flex;
+	// justify-content: space-around;
+  }
+  .bl_headerNav:first-of-type {
+	margin-right: 140px;
+  }
+  .bl_headerNav_item {
+	flex-grow: 1;
+	margin-bottom: 2em;
+  }
+  
+  .bl_headerNav_item:last-child .bl_headerNav_link::after {
+	content: none;
+  }
+  
+  .bl_headerNav_link {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px solid $cr-black;
+	color: #222;
+	text-decoration: none;
+	transition: .25s;
+	font-size: 2.4rem;
+  }
+  
+  .bl_headerNav_link:focus,
+  .bl_headerNav_link:hover {
+	// border-bottom-color: #e25c00;
+  }
+
+  .bl_headerChildNav{
+	margin-left: 1.25em;
+	display: flex;
+	flex-wrap: wrap;
+  }
+  .bl_headerChildNav_item{
+	//   width: 25%;
+	margin-right: 28px;
+  }
+  .bl_headerChildNav_link{
+	  font-size: 1.8rem;
+	  white-space: nowrap;
+  }
+  .bl_headerChildNav_ttl{
+	  position: relative;
+	  margin-left: 1.25em;
+	  font-size: 1.8rem;
+	  margin-top: 1em;
+  }
+  .bl_headerChildNav_ttl::after{
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-150%, -50%);
+  width: 12px;
+  height: 1px;
+  background-color: $cr-black;
+}
+.bl_headerChildNav--language{
+	margin-top: 1em;
+}
+.bl_headerNav_item--language{
+	margin-top: 8em;
+}
+.bl_headerNav_logo{
+	position: absolute;
+	left: 2%;
+	top: 10%;
+}
+//   .bl_headerNav_link::after {
+// 	content: '';
+// 	position: absolute;
+// 	top: 50%;
+// 	right: 0;
+// 	width: 1px;
+// 	height: 20px;
+// 	background-color: #ddd;
+// 	transform: translateY(-50%);
+//   }
+  

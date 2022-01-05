@@ -1,0 +1,50 @@
+@import "settings";
+
+.bl_headerNavWrapper{
+	// background-color: $cr-white;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: none;
+	transition: 0.9;
+	opacity: 1;
+
+}
+.bl_headerNavBg{
+	transition: 0.3s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $cr-white;
+	opacity: 0;
+	z-index: 999;
+}
+
+.active.bl_headerNavBg{
+	opacity: 1;
+	width: 100%;
+	height: 100vh;
+}
+.bl_headerNavWrapper.active{
+	display: block;
+}
+
+
+
+.bl_headerNavWrapper nav{
+	display: flex;
+	position: absolute;
+	// right: 20%;
+	top: 8%;
+left: 20%;
+opacity: 0;
+transition: 0.9;
+}
+
+
+.bl_headerNavWrapper.active nav{
+opacity: 1;
+}

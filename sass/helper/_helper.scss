@@ -1,0 +1,70 @@
+@import "settings";
+
+.ly-inner{
+	max-width: 1025px;
+	margin: 0 auto;
+	@include mq(md) { 
+        padding-left: 1em;
+		padding-right: 1em;
+      }
+}
+
+
+.sp-br {
+	display: block;
+}
+.pc-br {
+	display: inline;
+}
+.text-center {
+	text-align: center;
+}
+
+
+.sp-none {
+	display: none;
+}
+
+.pc-none {
+	display: block;
+}
+
+.row_reverse {
+	flex-direction: row-reverse;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+
+
+@media screen and (min-width: 768px) {
+	.sp-none {
+		display: block;
+	}
+
+	.pc-none {
+		display: none;
+	}
+
+	.sp-br {
+		display: inline;
+	}
+
+	.pc-br {
+		display: block;
+	}
+}
+
+
+.hp_en{
+	font-family: 'Lora', serif;
+}
+.hp_ja{
+	font-family: 'Shippori Mincho', serif;
+}

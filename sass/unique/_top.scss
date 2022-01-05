@@ -1,0 +1,238 @@
+@import "settings";
+
+.ly_topTopics{
+padding-top: 135px;
+}
+.bl_top_lv2heading{
+	font-size: 6rem;
+	line-height: 1;
+	margin-bottom: func-em(40,60);
+}
+
+.bl_top_lv2headingDecoration{
+	display: block;
+	line-height: 1;
+	// margin-top: 12px;
+	font-size: 1.2rem;
+	padding: 1em;
+}
+.un_topMv{
+	padding: 0 24px;
+}
+
+/*---------------------------------
+  topTopics
+---------------------------------*/
+.ly_topTopics{
+	margin-bottom: $sec-interval;
+}
+.un_topTopics_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -32px;
+	padding-bottom: 102px;
+	position: relative;
+	// border-bottom: 1px solid #000;
+}
+.un_topTopics_list::after{
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: calc(100% - 32px);
+height:1px;
+background-color: $cr-black;
+margin-left: 32px;
+}
+.un_topTopics_item_tagItem{
+padding: 8px 16px;
+background-color: $cr-black;
+color: $cr-white;
+display: inline-block;
+margin-top: 12px;
+margin-bottom: 12px;
+}
+.un_topTopics_item{
+	width: 33%;
+	padding-left: 32px;
+}
+
+/*---------------------------------
+  topMiddle
+---------------------------------*/
+.un_topMiddleImages{
+	margin-bottom: $sec-interval;
+}
+.un_topMiddleImages img{
+	width: 100%;
+}
+/*---------------------------------
+  Category
+---------------------------------*/
+.ly_topCategory{
+	padding-bottom: $sec-interval;
+	background-color: #EDEDED;
+	padding-top: func-em(72,16);
+}
+.ly_topCategory_inner{
+	max-width: 1200px;
+	margin: 0 auto;
+
+}
+.un_topCategory_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -32px;
+}
+
+.un_topCategory_item{
+	width: 25%;
+	padding-left: 32px;
+	position: relative;
+	margin-bottom: 24px;
+}
+.un_topCategory_item img{
+width: 100%;
+height: 100%;
+}
+.un_topCategory_item_ttl{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $cr-white;
+	padding-left: 32px;
+	font-size: 2.6rem;
+	white-space: nowrap;
+}
+
+/*---------------------------------
+  news
+---------------------------------*/
+.ly_topNews{
+	margin-bottom: $sec-interval;
+}
+.ly_topNews_container{
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 16px;
+    padding-right: 16px;
+}
+
+.ly_topNews_head{
+	flex: 1;
+	background-color: #EDEDED;
+	position: relative;
+	// z-index: 0;
+	padding-left: 32px;
+}
+.ly_topNews_head::after{
+	content: "";
+	position: absolute;
+	top: -10%;
+	left: -20vw;
+	// transform: translate(-50%, -50%);
+	background-color:#EDEDED;
+	width: 120vw;
+	height: 160%;
+	max-width: 1000px;
+	z-index: -2;
+}
+.ly_topNewsbody{
+	flex: 3;
+	background-color: #f5f5f5;
+	position: relative;
+	padding-left: 116px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	position: relative;
+}
+.ly_topNewsbody::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -100%;
+	// transform: translate(-50%, -50%);
+	background-color:#f5f5f5;
+	width: 120vw;
+	height: 100%;
+	max-width: 1000px;
+	z-index: -2;
+}
+.ly_topNews_categoryItem{
+	margin-bottom: 24px;
+}
+.bl_topNews_item{
+	margin-bottom: func-em(12,16);
+}
+.bl_topNews_item_body{
+	
+}
+.bl_topNews_item_content{
+		display: flex;
+	align-items: center;
+}
+.bl_topNews_item_decoration{
+	width: 200px;
+	border-bottom: 1px solid #000;
+	transition: 0.2s;
+}
+.bl_topCategory_item_ttl{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.bl_topNews_item_link:hover .bl_topNews_item_decoration{
+	width: 220px;
+}
+.bl_topNewsitem_date{
+	padding-right: 32px;
+}
+.bl_topNews_item_decoration{
+	margin-right: 32px;
+}
+
+.bl_topNews_item_ttl{
+	padding: 0;
+	margin-bottom: 0;
+}
+.bl_topNews_item_Tag{
+	font-size: 1.4rem;
+	margin-top: 12px;
+margin-bottom: 12px;
+}
+.bl_topNews_categoryList{
+	margin-bottom: 96px;
+}
+/*---------------------------------
+  私たちについて
+---------------------------------*/
+.ly_topAboutUs{
+	background-image: url(../images/top/middle_visual.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ly_topAboutUs_body{
+	padding-top: 135px;
+	padding-bottom: 102px;
+}
+
+.bl_topAboutUs_lv2heading{
+	text-align: center;
+	color: $cr-white;
+}
+.bl_topAboutUs_btnWrapper{
+text-align: center;
+margin-top: func-em(62,16);
+}
+.bl_topAboutUs_btn{
+	background-color: $cr-black;
+	color: $cr-white;
+	padding: 20px 112px;
+	transition: 0.8s;
+}
+
+.bl_topAboutUs_btn:hover{
+	opacity: 0.8;
+}

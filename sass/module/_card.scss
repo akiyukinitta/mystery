@@ -1,0 +1,22 @@
+@import "settings";
+
+.bl_card_list{
+
+}
+
+.ly_topTopics{
+	margin-bottom: $sec-interval;
+}
+.bl_card_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -32px;
+	padding-bottom: 102px;
+	position: relative;
+	// border-bottom: 1px solid #000;
+}
+
+.bl_card_list{
+	width: 33%;
+	padding-left: 32px;
+}

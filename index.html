@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />　
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js"></script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<header class="ly_header">
+		<div class="ly_header_inner">
+			<div class="bl_headerUtils">
+				<a class="bl_headerUtils_logo" href="#"><img src="images/common/logo_green.svg" alt=""></a>
+				<!-- <a class="el_btn" href="#">お問い合わせ</a> -->
+
+				<!-- ハンバーガーボタン -->
+				<button type="button" id="btn19" class="btn-trigger" aria-controls="global-nav" aria-expanded="false">
+					<!-- <span class="p-hamburger__line">
+					  <span class="u-visuallyHidden">
+						メニューを開閉する
+					  </span>
+					</span> -->
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+
+				<!-- /ハンバーガーボタン -->
+
+			</div>
+			<!-- /.bl_headerUtils -->
+			<div class="bl_headerNavBg"></div>
+			<div class="bl_headerNavWrapper">
+				
+				<!-- <a class="bl_headerUtils_logo bl_headerNav_logo" href="#"><img src="images/common/logo_green.svg" alt=""></a> -->
+				<nav>
+					<ul class="bl_headerNav">
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">HOME</a>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">PRODUCT</a>
+							<p class="bl_headerChildNav_ttl">
+								カテゴリー
+							</p>
+							<ul class="bl_headerChildNav">
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">DRIVER</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">FW/UT</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">IRON</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">WEDGE</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+								</li>
+							</ul>
+							<ul class="bl_headerChildNav">
+
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">PUTTER</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">SHAFT</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">ACCESSORY</a>
+								</li>
+							</ul>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">NEWS</a>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">MEDIA</a>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">試打会</a>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">SHOP</a>
+							<p class="bl_headerChildNav_ttl">
+								エリア
+							</p>
+							<ul class="bl_headerChildNav">
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">北海道・東北エリア</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">甲信越・北陸エリア</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">関東エリア</a>
+								</li>
+
+							</ul>
+							<ul class="bl_headerChildNav">
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">中国エリア</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">四国エリア</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">九州・沖縄エリア</a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#">海外エリア</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+					<ul class="bl_headerNav">
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">ABOUT US</a>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">CONTACT</a>
+						</li>
+						<li class="bl_headerNav_item">
+							<a class="bl_headerNav_link" href="#">LINKS</a>
+						</li>
+
+						<li class="bl_headerNav_item bl_headerNav_item--language">
+							<a class="bl_headerNav_link" href="#">Languages</a>
+							<ul class="bl_headerChildNav bl_headerChildNav--language">
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#"><img src="images/common/japan_icon.jpg" alt=""></a>
+								</li>
+								<li class="bl_headerChildNav_item">
+									<a class="bl_headerChildNav_link" href="#"><img src="images/common/korea_icon.jpg" alt=""></a>
+								</li>
+						</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- /.ly_header_inner -->
+	</header>
+
+	<main>
+		<div class="un_topMv">
+			<ul class="un_topSlider">
+				<li class="un_topSlider_item">
+					<div class="un_topSlider_item_txt">
+						<p class="un_topSlider_item_ttl">
+							<span class="un_topSlider_item_tag">NEW</span>
+							212-MF
+							<span style="font-size: 0.4em; color: #f03434; display: block;">middleface</span>
+						</p>
+						<p class="un_topSlider_item_description">高精度の平面加工フェイスが生み出す<br>
+							高いスピン性能と 優れた方向性<br>
+							オートマチックモデルの211MFにバンスと操作性を加味</p>
+					</div>
+					<img src="images/top/mv.jpg" alt="">
+				</li>
+				<li class="un_topSlider_item">
+					<div class="un_topSlider_item_txt">
+						<p class="un_topSlider_item_ttl">
+							<span class="un_topSlider_item_tag">NEW</span>
+							CF-455 TOUR
+							<span style="font-size: 0.4em; display: block; color: #8486be"><span style="color: #a1a1a1;">DAT</span> 55G LASER</span>
+						</p>
+						<p class="un_topSlider_item_description">大慣性モーメントとバランスの良い重心設計により、<br>
+							安定した方向性と圧倒的な飛距離を達成</p>
+					</div>
+					<img src="images/top/mv2.jpg" alt="">
+				</li>
+				<li class="un_topSlider_item">
+					<div class="un_topSlider_item_txt">
+						<p class="un_topSlider_item_ttl">
+							<span class="un_topSlider_item_tag">NEW</span>
+							CF-455
+							<span style="font-size: 0.4em; display: block; color: #8486be"><span style="color: #a1a1a1;">DAT</span> 55G LASER</span>
+						</p>
+						<p class="un_topSlider_item_description">大慣性モーメントとバランスの良い重心設計により、<br>
+							安定した方向性と圧倒的な飛距離を達成</p>
+					</div>
+					<img src="images/top/mv3.jpg" alt="">
+				</li>
+			</ul>
+		</div>
+
+		<section class="ly_topTopics gsap_trigger01">
+			<div class="ly_topTopics_inner ly_top_inner">
+				<h2 class="bl_top_lv2heading bl_topTopics_lv2heading gsap_fadein">
+					<span class="hp_en">TOPICS</span>
+					<span class="bl_top_lv2headingDecoration bl_topTopics_lv2headingDecoration hp_ja">トピックス</span>
+				</h2>
+				<ul class="un_topTopics_list">
+					<li class="un_topTopics_item gsap_card">
+						<a href="">
+							<img src="images/top/topic01.jpg" alt="">
+							<ul class="un_topTopics_item_tagList">
+								<li class="un_topTopics_item_tagItem">NEW PRODUCTS</li>
+							</ul>
+							<p class="un_topTopics_item_text">月刊ゴルフ用品界2021年4月号に「C-HT520」が
+								掲載されました。</p>
+						</a>
+					</li>
+					<li class="un_topTopics_item gsap_card">
+						<a href="">
+							<img src="images/top/topic02.jpg" alt="">
+							<ul class="un_topTopics_item_tagList">
+								<li class="un_topTopics_item_tagItem">NEW PRODUCTS</li>
+							</ul>
+							<p class="un_topTopics_item_text">月刊ゴルフ用品界2021年4月号に「C-HT520」が
+								掲載されました。</p>
+						</a>
+					</li>
+					<li class="un_topTopics_item gsap_card">
+						<a href="">
+							<img src="images/top/topic03.jpg" alt="">
+							<ul class="un_topTopics_item_tagList">
+								<li class="un_topTopics_item_tagItem">NEW PRODUCTS</li>
+							</ul>
+							<p class="un_topTopics_item_text">月刊ゴルフ用品界2021年4月号に「C-HT520」が
+								掲載されました。</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="ly_topCategory">
+			<div class="ly_topCategory_inner ly_top_inner">
+				<h2 class="bl_top_lv2heading bl_topCategory__lv2heading gsap_fadein">
+					<span class="hp_en">CATEGORY</span>
+					<span class="bl_top_lv2headingDecoration bl_topTopics__lv2headingDecoration hp_ja">カテゴリー</span>
+				</h2>
+
+				<ul class="un_topCategory_list">
+					<li class="un_topCategory_item gsap_card anime_card_onTxt">
+						<a href="">
+							<img src="images/top/products_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">PRODUCTS</h3>
+						</a>
+					</li>
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/media_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">MEDIA</h3>
+						</a>
+					</li>
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/event_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">試打会</h3>
+						</a>
+					</li>
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/report_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">試打レポート</h3>
+						</a>
+					</li>
+
+
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/history_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">HISTORY</h3>
+						</a>
+					</li>
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/process_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">PROCESS</h3>
+						</a>
+					</li>
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/catalogue_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">CATALOGUE</h3>
+						</a>
+					</li>
+					<li class="un_topCategory_item gsap_card">
+						<a href="">
+							<img src="images/top/shoplist_thumb.jpg" alt="" class="un_topTopics_item_thumb">
+							<h3 class="un_topCategory_item_ttl">SHOPLIST</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="un_topMiddleImages">
+			<img src="images/top/middlee_image.jpg" alt="">
+		</div>
+
+		<section class="ly_topNews">
+			<div class="ly_topNews_inner">
+				<div class="ly_top_inner">
+					<h2 class="bl_top_lv2heading bl_topNews_lv2heading">
+						<span class="hp_en">NEWS</span>
+						<span class="bl_top_lv2headingDecoration bl_topNews_lv2headingDecoration hp_ja">ニュース</span>
+					</h2>
+				</div>
+
+				<div class="ly_topNews_container">
+					<div class="ly_topNews_head">
+						<ul class="bl_topNews_categoryList">
+							<li class="ly_topNews_categoryItem">すべて</li>
+							<li class="ly_topNews_categoryItem">NEW PRODUCTS</li>
+							<li class="ly_topNews_categoryItem">INFOMATION</li>
+						</ul>
+						<a href="" class="bl_viewMore_btn">
+							<span class="bl_viewMore_btn_text">VIEW ALL</span>
+							 <svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="0 0 116 116"
+								style="" class="bl_viewMore_btnCircleBg">
+					
+								<circle cx="58" cy="58" r="34" />
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="0 0 116 116"
+								style="" class="bl_viewMore_btnCircle">
+								<!-- cxはx軸の中心 cyはy軸の中心 rは半径 -->
+								<circle cx="58" cy="58" r="34" />
+							</svg>
+							
+						</a>
+					</div>
+					<div class="ly_topNewsbody">
+						<ul class="un_topNews_list">
+							<li class="bl_topNews_item">
+								<div class="bl_topNews_item_head">
+									<p class="bl_topNews_item_Tag el_tagItem">NEW PRODUCT</p>
+								</div>
+								<div class="bl_topNews_item_body">
+									<a href="" class="bl_topNews_item_link">
+										<div class="bl_topNews_item_content">
+											<date class="bl_topNewsitem_date">2021_09/20</date>
+											<span class="bl_topNews_item_decoration"></span>
+											<h3 class="bl_topNews_item_ttl">月刊ゴルフ用品会201</h3>
+										</div>
+									</a>
+								</div>
+
+							</li>
+							<li class="bl_topNews_item">
+								<div class="bl_topNews_item_head">
+									<p class="bl_topNews_item_Tag el_tagItem">NEW PRODUCT</p>
+								</div>
+								<div class="bl_topNews_item_body">
+									<a href="" class="bl_topNews_item_link">
+										<div class="bl_topNews_item_content">
+											<date class="bl_topNewsitem_date">2021_09/20</date>
+											<span class="bl_topNews_item_decoration"></span>
+											<h3 class="bl_topNews_item_ttl">月刊ゴルフ用品会201</h3>
+										</div>
+									</a>
+								</div>
+
+							</li>
+							<li class="bl_topNews_item">
+								<div class="bl_topNews_item_head">
+									<p class="bl_topNews_item_Tag el_tagItem">NEW PRODUCT</p>
+								</div>
+								<div class="bl_topNews_item_body">
+									<a href="" class="bl_topNews_item_link">
+										<div class="bl_topNews_item_content">
+											<date class="bl_topNewsitem_date">2021_09/20</date>
+											<span class="bl_topNews_item_decoration"></span>
+											<h3 class="bl_topNews_item_ttl">月刊ゴルフ用品会201</h3>
+										</div>
+									</a>
+								</div>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ly_topAboutUs">
+			<div class="ly_topAboutUs_body">
+				<h2 class="bl_top_lv2heading bl_topAboutUs_lv2heading">ABOUT US<span
+						class="bl_top_lv2headingDecoration bl_topTopAboutUs__lv2headingDecoration">私たちについて</span></h2>
+				<div class="bl_topAboutUs_btnWrapper">
+					<a href="#" class="bl_topAboutUs_btn">VIEW ALL</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="ly_footer">
+			<div class="ly_footer_inner">
+				<div class="ly_footer_contents">
+					<div class="ly_footer_head">
+						<div class="bl_footer_logo">
+							<img src="images/common/logo_white.svg" alt="">
+						</div>
+						<div class="bl_footerSns">
+							<p class="bl_footerSns_ttl">公式アカウント</p>
+							<ul class="bl_footerSns_list">
+								<li class="bl_footerSns_item bl_footerSns_item--instagram">
+									Instagram
+								</li>
+							</ul>
+						</div>
+
+						<div class="bl_footerLang">
+
+							<ul class="bl_footerLang_list">
+								<li class="bl_footerLang_item">
+									<img src="images/common/japan_icon.jpg" alt="">
+								</li>
+								<li class="bl_footerLang_item">
+									<img src="images/common/korea_icon.jpg" alt="">
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="ly_footer_body">
+						<nav>
+							<ul class="bl_footerNav">
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">PRODUCT</a>
+									<p class="bl_footerChildNav_ttl">
+										カテゴリー
+									</p>
+									<ul class="bl_footerChildNav">
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">DRIVER</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">FW/UT</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">IRON</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">WEDGE</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">PUTTER</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">SHAFT</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">ACCESSORY</a>
+										</li>
+
+									</ul>
+								</li>
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">CATALOGUE</a>
+								</li>
+
+
+								</ul>
+								<ul class="bl_footerNav">
+									<li class="bl_footerNav_item">
+										<a class="bl_footerNav_link" href="#">NEWS</a>
+									</li>
+									<li class="bl_footerNav_item">
+										<a class="bl_footerNav_link" href="#">MEDIA</a>
+									</li>
+									<li class="bl_footerNav_item">
+										<a class="bl_footerNav_link" href="#">試打会</a>
+									</li>
+									<li class="bl_footerNav_item">
+										<a class="bl_footerNav_link" href="#">試打レポート</a>
+									</li>
+									<li class="bl_footerNav_item">
+										<a class="bl_footerNav_link" href="#">ABOUT US</a>
+									</li>
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">HISTORY</a>
+								</li>
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">PROCESS</a>
+								</li>
+
+							</ul>
+							<ul class="bl_footerNav">
+
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">SHOPLIST</a>
+									<p class="bl_footerChildNav_ttl">
+										エリア
+									</p>
+									<ul class="bl_footerChildNav">
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">北海道・東北エリア</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">甲信越・北陸エリア</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">関東エリア</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">中国エリア</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">四国エリア</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">九州・沖縄エリア</a>
+										</li>
+										<li class="bl_footerChildNav_item">
+											<a class="bl_footerChildNav_link" href="#">海外エリア</a>
+										</li>
+									</ul>
+								</li>
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">CONTACT</a>
+								</li>
+								<li class="bl_footerNav_item">
+									<a class="bl_footerNav_link" href="#">LINKS</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+
+
+				</div>
+
+				<div class="bl_footerCopyrightWrapper">
+					<small class="el_footerCopyright">株式会社　和宏エンタープライズ 〒532-0011 大阪府大阪市淀川区西中島7-7-2　新大阪ビル西館602号</small>
+				</div>
+				<!-- /.ly_footer_inner -->
+			</div>
+		</div>
+		<!-- /.ly_footer -->
+	</footer>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/hamburger.js"></script>
+	<script src="js/slick-my.js"></script>
+	<script src="js/gsap.js"></script>
+
+</body>
+
+</html>
