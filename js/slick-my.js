@@ -22,6 +22,13 @@
         slidesToShow: 1,
         nextArrow:'<div class="next">→</div>',
         // fade:true,//切り替えをフェードで行う。初期値はfalse。
+        responsive: [{
+          breakpoint: 1200,
+            settings: {
+              centerMode: false,
+          }
+        }
+        ]
       })
       .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
         $(".slick_nowCount").text(nextSlide + 1); // 現在のスライド番号の次のスライドになったら番号を+1

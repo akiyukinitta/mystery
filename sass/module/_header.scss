@@ -1,17 +1,23 @@
 @import "settings";
 
 .ly_header {
-	padding-top: 20px;
+	padding-top: 30px;
 	// border-bottom: 1px solid #ddd;
-	// position: fixed;
+	position: fixed;
 	z-index: 100;
 	background-color: #f3f3f3;
 	width: 100%;
 	top: 0;
-	// box-shadow:  0 1px 2px;
+	box-shadow:  0 1px 2px;
   }
 
-
+  .ly_subheader{
+	// box-shadow:  0 1px 2px;
+	padding-bottom: 20px;
+  }
+  .ly_subheader .bl_headerUtils{
+margin-bottom: 0;
+  }
 
   
   .ly_header_inner {
@@ -32,6 +38,9 @@
   .bl_headerUtils_logo {
 	width: 150px;
 	margin: 0 auto;
+  }
+  .bl_headerUtils_logo img{
+	width: 220px;
   }
   
   .bl_headerUtils .el_btn {

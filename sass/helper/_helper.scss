@@ -1,62 +1,52 @@
 @import "settings";
 
-.ly-inner{
-	max-width: 1025px;
-	margin: 0 auto;
-	@include mq(md) { 
-        padding-left: 1em;
-		padding-right: 1em;
-      }
-}
-
-
-.sp-br {
+.hp_sp-br {
 	display: block;
 }
-.pc-br {
+.hp_pc-br {
 	display: inline;
 }
-.text-center {
+.hp_textCenter {
 	text-align: center;
 }
 
 
-.sp-none {
+.hp_spNone {
 	display: none;
 }
 
-.pc-none {
+.hp_pcNone {
 	display: block;
 }
 
-.row_reverse {
+.hp_rowReverse {
 	flex-direction: row-reverse;
 }
 
-.text-right {
+.hp_textRight {
 	text-align: right;
 }
 
-.text-left {
+.hp_textLeft {
 	text-align: left;
 }
 
 
 
 @media screen and (min-width: 768px) {
-	.sp-none {
+	.hp_spNone {
 		display: block;
 	}
 
-	.pc-none {
+	.hp_pcNone {
 		display: none;
 	}
 
-	.sp-br {
+	.hp_spBr {
 		display: inline;
 	}
 
-	.pc-br {
+	.hp_pcBr {
 		display: block;
 	}
 }
