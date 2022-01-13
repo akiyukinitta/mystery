@@ -111,3 +111,33 @@ margin-top: 1.8em;
 .un_Products_lv2heading--3 img{
 width: 100%;
     }
+
+    .un_productsLinkbox{
+      display: flex;
+      justify-content: space-between;
+      padding: 2em;
+      background-color: #191919;
+      max-width: 786px;
+      margin-right: auto;
+      margin-left: auto;
+      color: $cr-white;
+      align-items: center;
+      margin-top: 4em;
+      margin-bottom: 3em;
+      @include mq(md) { 
+display: block;
+text-align: center;
+        }
+    }
+    .un_productsLinkbox_txt{
+      text-align: center;
+      width: 50%;
+      @include mq(md) { 
+width: 100%;
+margin-bottom: 4em;
+                }
+    }
+    .un_productsLinkbox_title{
+      margin-bottom: 40px;
+      font-size: 2.4rem;
+    }

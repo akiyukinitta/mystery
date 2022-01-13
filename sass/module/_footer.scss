@@ -4,7 +4,10 @@
 	padding-top: 78px;
 	padding-bottom: 20px;
 	background-color: #222;
-	margin-top: func-em(160,16);
+	margin-top: 5em;
+	@include mq(sm) { 
+		padding-top: 48px;
+	  }
   }
   
   .hp_btGray {
@@ -22,7 +25,10 @@
 	  display: flex;
 	  justify-content: space-between;
 	  align-items: center;
-	  padding-bottom: 4em;
+	  padding-bottom: 2em;
+@media screen and (max-width: 900px) {
+	display: block;
+}
   }
   .ly_footer_side
   .bl_footerNav {
@@ -33,6 +39,9 @@
   .bl_footerNav_item {
 	flex: 1;
 	margin-bottom: 1em;
+	// @include mq(sm) { 
+	// 	width: 50vw;
+	//   }
   }
   
   .bl_footerNav_item > *:last-child {
@@ -46,7 +55,7 @@
   .bl_footerNav_link {
 	position: relative;
 	display: block;
-	padding-bottom: 8px;
+	padding-bottom: 4px;
 	color: #fff;
 	text-decoration: none;
 	border-bottom: 1px solid $cr-white;
@@ -69,16 +78,24 @@
 // 	background-color: currentColor;
 // 	transform: translateY(-50%);
 //   }
-  
+  .bl_footer_logo{
+	  text-align: center;
+  }
   .bl_footerChildNav {
 	/* css-wipeではスタイリングなし */
 	margin-left: 1.25em;
+	@include mq(sm) { 
+		margin-left: 0em;
+	  }
   }
   .bl_footerChildNav_ttl{
 	  position: relative;
 	  color: $cr-white;
 	  margin-left: 1.25em;
 	  margin-top: 0.8em;
+	  @include mq(sm) { 
+		margin-left: 0em;
+	  }
   }
   .bl_footerChildNav_ttl::after{
 	  content: "";
@@ -89,9 +106,18 @@
 	width: 12px;
 	height: 1px;
 	background-color: $cr-white;
+	@include mq(sm) { 
+		content: none;
+	  }
 }
   .bl_footerChildNav_item {
-	margin-bottom: 4px;
+	// margin-bottom: 4px;
+	a{
+			@include mq(sm) { 
+		font-size: 1.4em;
+	  }
+	}
+
   }
   
   .bl_footerChildNav_link {
@@ -105,17 +131,38 @@
 	text-decoration: underline;
   }
 .ly_footer_body{
-
+	@media screen and (max-width: 900px) {
+		margin-top: 2em;
+	}
+	@include mq(sm) { 
+		margin-top: 3em;
+		display: none;
+	  }
 }
 .bl_footerNav:first-of-type{
 margin-right: 120px;
+@include mq(sm) { 
+	margin-right: 0;
+  }
 }
 .bl_footerNav:nth-of-type(2){
 	margin-right: 120px;
+	@include mq(sm) { 
+		margin-right: 0;
+	  }
 	}
 .ly_footer_body nav{
 	display: flex;
-	
+	@include mq(lg) { 
+		justify-content: space-around;
+	  }
+	@include mq(sm) { 
+		justify-content: space-between;
+		display: block;
+		// flex-wrap: wrap;
+		// font-size: 1.2rem;
+		// display: block;
+	  }
 }
 
 .bl_footerSns{
@@ -123,19 +170,30 @@ margin-right: 120px;
 	color: $cr-white;
 	text-align: center;
 	margin-top: 32px;
+	@include mq(sm) { 
+margin-top: 18px;
+	  }
 }
 .bl_footerLang{
 	margin-top: 54px;
+	@include mq(md) { 
+		margin-top: 24px;
+			  }
 }
 .bl_footerLang_list{
 	display: flex;
 	justify-content: space-between;
-	max-width: 108px;
+	// max-width: 108px;
 	margin-right: auto;
 	margin-left: auto;
+	flex-wrap: wrap;
+	@media screen and (max-width: 900px) {
+		max-width: 200px;
+	}
 }
 .bl_footerLang_item{
 	// padding-right: 42px;
+	max-width: 24px;
 }
   
   .el_footerCopyright {
@@ -145,3 +203,43 @@ margin-right: 120px;
 	text-align: center;
   }
   
+  .bl_footerSns{
+	 position: relative;
+	 z-index: 0;
+  }
+  /*
+  .bl_footerSns::after{
+	  content: "";
+	  background-image: url(../../images/common/insta_icon.png);
+	  width: 30px;
+	  height: 100px;
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -26%);
+	z-index: -1;
+  }
+  */
+  .bl_footerSns_list{
+	  margin-top: 0.4em;
+  }
+  .bl_footerSns_item{
+	  display: inline-block;
+	  position: relative;
+	  max-width: 40px;
+  }
+//   .bl_footerSns_item--instagram::after{
+// 	content: "";
+// 	background-image: url(../images/common/insta_icon.png);
+// 	width: 1em;
+// 	height: 1em;
+// 	background-size: contain;
+// 	background-repeat: no-repeat;
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+//   transform: translate(-140%, -50%);
+//   z-index: -1;
+// }

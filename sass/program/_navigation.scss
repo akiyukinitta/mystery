@@ -11,7 +11,9 @@
 	display: none;
 	transition: 0.9;
 	opacity: 1;
-
+	@include mq(md) { 
+overflow-y: scroll;
+	  }
 }
 .bl_headerNavBg{
 	transition: 0.3s;
@@ -42,6 +44,9 @@
 left: 20%;
 opacity: 0;
 transition: 0.9;
+@include mq(md) { 
+	display: block;
+  }
 }
 
 

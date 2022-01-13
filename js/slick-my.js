@@ -16,7 +16,7 @@
         autoplaySpeed: 3000,
         speed: 1000,
         arrows: true,
-        centerMode: true,
+        // centerMode: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         slidesToShow: 1,
