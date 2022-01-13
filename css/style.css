@@ -6,6 +6,78 @@
   }
   */
 
+.anime_card {
+	overflow: hidden;
+}
+
+.anime_card img {
+	-webkit-transition: 0.5s;
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	transition: 0.5s;
+}
+
+.anime_card:hover img {
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+	opacity: 0.9;
+}
+
+.anime_card:hover .un_topTopics_item_text {
+	opacity: 0.8;
+}
+
+/*全共通*/
+
+.bgextend {
+	-webkit-animation-name: bgextendAnimeBase;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: bgextendAnimeBase; /*　はみ出た色要素を隠す　*/
+	opacity: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+/*中の要素*/
+
+.bgappear {
+	-webkit-animation-name: bgextendAnimeSecond;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 0.6s;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0.6s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: bgextendAnimeSecond;
+	opacity: 0;
+}
+
+/*左から右*/
+
+.bgLRextend::before {
+	-webkit-animation-name: bgLRextendAnime;
+	-webkit-animation-duration: 1.0s;
+	-webkit-animation-fill-mode: forwards;
+	animation-duration: 1.0s;
+	animation-fill-mode: forwards;
+	animation-name: bgLRextendAnime;
+	background-color: #666;
+	content: "";
+	height: 100%;
+	position: absolute;
+	width: 100%; /*伸びる背景色の設定*/
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.bgappearTrigger,
+.bgLRextendTrigger {
+	opacity: 0;
+}
+
 /*使い方*/
 
 /*呼び出したいところで、()内に上の値指定、（mdを書き換える）
@@ -35,7 +107,7 @@ body {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #f3f3f3;
+	background-color: #ffffff;
 	color: #3c3c3c;
 	font-family: 'Shippori Mincho', serif;
 	font-size: 1.3rem;
@@ -494,10 +566,6 @@ progress {
   }
   */
 
-.ly_topTopics {
-	margin-bottom: 8em;
-}
-
 .bl_card_list {
 	-ms-flex-wrap: wrap;
 	display: -webkit-box;
@@ -544,7 +612,7 @@ progress {
 
 .ly_footer {
 	background-color: #222;
-	margin-top: 10em;
+	margin-top: 5em;
 	padding-bottom: 20px;
 	padding-top: 78px;
 }
@@ -571,7 +639,7 @@ progress {
 	display: -ms-flexbox;
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 4em;
+	padding-bottom: 2em;
 }
 
 .ly_footer_side
@@ -603,7 +671,7 @@ progress {
 	color: #fff;
 	display: block;
 	display: inline-block;
-	padding-bottom: 8px;
+	padding-bottom: 4px;
 	position: relative;
 	text-decoration: none;
 }
@@ -611,6 +679,10 @@ progress {
 .bl_footerNav_link:focus,
 .bl_footerNav_link:hover {
 	opacity: 0.8;
+}
+
+.bl_footer_logo {
+	text-align: center;
 }
 
 .bl_footerChildNav { /* css-wipeではスタイリングなし */
@@ -635,10 +707,6 @@ progress {
 	top: 50%;
 	transform: translate(-150%, -50%);
 	width: 12px;
-}
-
-.bl_footerChildNav_item {
-	margin-bottom: 4px;
 }
 
 .bl_footerChildNav_link {
@@ -679,13 +747,18 @@ progress {
 .bl_footerLang_list {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
+	-ms-flex-wrap: wrap;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 108px;
+}
+
+.bl_footerLang_item {
+	max-width: 24px;
 }
 
 .el_footerCopyright {
@@ -693,6 +766,37 @@ progress {
 	display: block;
 	font-size: 12px;
 	text-align: center;
+}
+
+.bl_footerSns {
+	position: relative;
+	z-index: 0;
+}
+
+/*
+  .bl_footerSns::after{
+	  content: "";
+	  background-image: url(../../images/common/insta_icon.png);
+	  width: 30px;
+	  height: 100px;
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -26%);
+	z-index: -1;
+  }
+  */
+
+.bl_footerSns_list {
+	margin-top: 0.4em;
+}
+
+.bl_footerSns_item {
+	display: inline-block;
+	max-width: 40px;
+	position: relative;
 }
 
 /*使い方*/
@@ -704,9 +808,9 @@ progress {
   */
 
 .ly_header {
-	-webkit-box-shadow: 0 1px 2px;
-	background-color: #f3f3f3;
-	box-shadow: 0 1px 2px;
+	-webkit-box-shadow: 0px 0px 2px;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px;
 	padding-top: 30px;
 	position: fixed;
 	top: 0;
@@ -740,16 +844,11 @@ progress {
 	display: -ms-flexbox;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 24px;
 }
 
 .bl_headerUtils_logo {
-	margin: 0 auto;
 	width: 150px;
-}
-
-.bl_headerUtils_logo img {
-	width: 220px;
 }
 
 .bl_headerUtils .el_btn {
@@ -869,7 +968,7 @@ progress {
 	background-color: #3c3c3c;
 	color: #fafafa;
 	display: inline-block;
-	padding: 8px 16px;
+	padding: 4px 16px;
 }
 
 /*使い方*/
@@ -880,24 +979,16 @@ progress {
   }
   */
 
-.hp_sp-br {
-	display: block;
-}
-
-.hp_pc-br {
-	display: inline;
-}
-
 .hp_textCenter {
 	text-align: center;
 }
 
 .hp_spNone {
-	display: none;
+	display: none !important;
 }
 
 .hp_pcNone {
-	display: block;
+	display: block !important;
 }
 
 .hp_rowReverse {
@@ -1028,6 +1119,36 @@ progress {
 	width: 100%;
 }
 
+.un_productsLinkbox {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: #191919;
+	color: #fafafa;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4em;
+	max-width: 786px;
+	padding: 2em;
+}
+
+.un_productsLinkbox_txt {
+	text-align: center;
+	width: 50%;
+}
+
+.un_productsLinkbox_title {
+	font-size: 2.4rem;
+	margin-bottom: 40px;
+}
+
 /*使い方*/
 
 /*呼び出したいところで、()内に上の値指定、（mdを書き換える）
@@ -1036,14 +1157,10 @@ progress {
   }
   */
 
-.ly_topTopics {
-	padding-top: 135px;
-}
-
 .bl_top_lv2heading {
 	font-size: 6rem;
 	line-height: 1;
-	margin-bottom: 0.66667em;
+	margin-bottom: 0.3em;
 }
 
 .bl_top_lv2headingDecoration {
@@ -1063,7 +1180,8 @@ progress {
 ---------------------------------*/
 
 .ly_topTopics {
-	margin-bottom: 8em;
+	margin-bottom: 4em;
+	padding-top: 72px;
 }
 
 .un_topTopics_list {
@@ -1072,8 +1190,8 @@ progress {
 	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -32px;
-	padding-bottom: 102px;
+	margin-left: -16px;
+	padding-bottom: 50px;
 	position: relative;
 }
 
@@ -1098,7 +1216,7 @@ progress {
 }
 
 .un_topTopics_item {
-	padding-left: 32px;
+	padding-left: 16px;
 	width: 33%;
 }
 
@@ -1107,7 +1225,7 @@ progress {
 ---------------------------------*/
 
 .un_topMiddleImages {
-	margin-bottom: 8em;
+	margin-bottom: 4em;
 }
 
 .un_topMiddleImages img {
@@ -1119,9 +1237,7 @@ progress {
 ---------------------------------*/
 
 .ly_topCategory {
-	background-color: #EDEDED;
-	padding-bottom: 8em;
-	padding-top: 4.5em;
+	padding-bottom: 4em;
 }
 
 .ly_topCategory_inner {
@@ -1135,12 +1251,12 @@ progress {
 	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -32px;
+	margin-left: -16px;
 }
 
 .un_topCategory_item {
-	margin-bottom: 24px;
-	padding-left: 32px;
+	margin-bottom: 16px;
+	padding-left: 16px;
 	position: relative;
 	width: 25%;
 }
@@ -1168,7 +1284,7 @@ progress {
 ---------------------------------*/
 
 .ly_topNews {
-	margin-bottom: 8em;
+	margin-bottom: 4em;
 }
 
 .ly_topNews_container {
@@ -1227,7 +1343,7 @@ progress {
 }
 
 .ly_topNews_categoryItem {
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 }
 
 .bl_topNews_item {
@@ -1255,10 +1371,6 @@ progress {
 	padding-bottom: 0;
 }
 
-.bl_topNews_item_link:hover .bl_topNews_item_decoration {
-	width: 220px;
-}
-
 .bl_topNewsitem_date {
 	padding-right: 32px;
 }
@@ -1279,7 +1391,7 @@ progress {
 }
 
 .bl_topNews_categoryList {
-	margin-bottom: 96px;
+	margin-bottom: 52px;
 }
 
 /*---------------------------------
@@ -1294,8 +1406,8 @@ progress {
 }
 
 .ly_topAboutUs_body {
-	padding-bottom: 102px;
-	padding-top: 135px;
+	padding-bottom: 112px;
+	padding-top: 136px;
 }
 
 .bl_topAboutUs_lv2heading {
@@ -1317,6 +1429,8 @@ progress {
 }
 
 .bl_topAboutUs_btn:hover {
+	background-color: #fafafa;
+	color: #3c3c3c;
 	opacity: 0.8;
 }
 
@@ -1405,6 +1519,7 @@ progress {
 .btn-trigger {
 	cursor: pointer;
 	height: 36px;
+	margin-top: 8px;
 	position: relative;
 	width: 40px;
 	z-index: 9999;
@@ -1575,10 +1690,6 @@ progress {
   }
   */
 
-.un_topSlider .slick-list {
-	padding: 0 20% 0 0 !important;
-}
-
 .un_topSlider .slick-slide {
 	margin: 0 0.1%;
 }
@@ -1641,6 +1752,10 @@ progress {
 	text-shadow: 1px 2px 3px #808080;
 }
 
+.slick-prev {
+	display: none;
+}
+
 .next.slick-arrow {
 	border-radius: 50%;
 	color: #fafafa;
@@ -1648,7 +1763,7 @@ progress {
 	line-height: 1;
 	padding: 1.6em;
 	position: absolute;
-	right: 24%;
+	right: 10%;
 	top: 40%;
 }
 
@@ -1682,10 +1797,10 @@ progress {
 	fill: transparent;
 	stroke: #fff;
 	stroke-width: 1;
-	-webkit-transition: stroke-dashoffset 2.4s ease;
+	-webkit-transition: stroke-dashoffset 1.2s ease;
 	stroke-dasharray: 366 366;
 	stroke-dashoffset: 366;
-	transition: stroke-dashoffset 2.4s ease; /* keyframes名 速さ 繰り返し 開始までの間隔 */
+	transition: stroke-dashoffset 1.2s ease; /* keyframes名 速さ 繰り返し 開始までの間隔 */
 }
 
 .next.slick-arrow:hover .bl_viewMore_btnCircle circle {
@@ -1753,6 +1868,14 @@ progress {
 
 }
 
+@media screen and (min-width: 575px) {
+
+.bl_topNews_item_link:hover .bl_topNews_item_decoration {
+	width: 220px;
+}
+
+}
+
 @media screen and (min-width: 768px) {
 
 body {
@@ -1760,31 +1883,49 @@ body {
 }
 
 .hp_spNone {
-	display: block;
+	display: block !important;
 }
 
 .hp_pcNone {
-	display: none;
-}
-
-.hp_spBr {
-	display: inline;
-}
-
-.hp_pcBr {
-	display: block;
+	display: none !important;
 }
 
 }
 
 @media (max-width: 991px) {
 
+.ly_footer_body nav {
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+
 .un_Products_item_ttl {
 	font-size: 3vw;
 }
 
+.ly_topAboutUs_body {
+	padding-bottom: 56px;
+	padding-top: 68px;
+}
+
 .un_topSlider img {
 	height: 48vw;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+
+.ly_footer_contents {
+	display: block;
+}
+
+.ly_footer_body {
+	margin-top: 2em;
+}
+
+.bl_footerLang_list {
+	max-width: 200px;
 }
 
 }
@@ -1801,6 +1942,14 @@ h3 {
 
 .bl_card_list.bl_card_list--size3 .bl_card_item {
 	width: 50%;
+}
+
+.bl_footerLang {
+	margin-top: 24px;
+}
+
+.bl_headerNav_item--language {
+	margin-top: 2em;
 }
 
 .un_Products_item_ttl {
@@ -1821,12 +1970,109 @@ h3 {
 	width: 100%;
 }
 
+.un_productsLinkbox {
+	display: block;
+	text-align: center;
+}
+
+.un_productsLinkbox_txt {
+	margin-bottom: 4em;
+	width: 100%;
+}
+
+.un_topMv {
+	margin-top: 8.2em;
+}
+
+.ly_topTopics {
+	padding-top: 36px;
+}
+
+.un_topTopics_list {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.un_topTopics_item {
+	margin-bottom: 2em;
+	width: 50%;
+}
+
+.un_topCategory_item {
+	margin-bottom: 2em;
+	width: 50%;
+}
+
+.ly_topNews_container {
+	display: block;
+}
+
+.ly_topNews_head {
+	padding-bottom: 4em;
+	padding-top: 2em;
+}
+
+.ly_topNews_head::after {
+	display: block;
+}
+
+.ly_topNewsbody {
+	padding-left: 0;
+}
+
+.ly_topNewsbody::after {
+	display: none;
+}
+
+.ly_topNews_categoryItem {
+	padding-right: 1em;
+}
+
+.bl_topNews_item_decoration {
+	width: 100px;
+}
+
+.bl_topNews_categoryList {
+	-ms-flex-wrap: wrap;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.bl_headerNavWrapper {
+	overflow-y: scroll;
+}
+
+.bl_headerNavWrapper nav {
+	display: block;
+}
+
 .un_topSlider .slick-list {
 	padding: 0 0% 0 0 !important;
 }
 
 .un_topSlider img {
-	font-size: 3rem;
+	height: 96vw;
+}
+
+.un_topSlider_item_txt {
+	padding-right: 1em;
+	top: 10%;
+}
+
+.un_topSlider_item_ttl {
+	font-size: 6.2vw;
+}
+
+.un_topSlider_item_description {
+	font-size: 2.5vw;
+	margin-top: 2em;
+}
+
+.next.slick-arrow {
+	display: none !important;
 }
 
 }
@@ -1845,8 +2091,130 @@ h3 {
 	width: 100%;
 }
 
+.ly_footer {
+	padding-top: 48px;
+}
+
+.bl_footerChildNav {
+	margin-left: 0em;
+}
+
+.bl_footerChildNav_ttl {
+	margin-left: 0em;
+}
+
+.bl_footerChildNav_ttl::after {
+	content: none;
+}
+
+.bl_footerChildNav_item a {
+	font-size: 1.4em;
+}
+
+.ly_footer_body {
+	display: none;
+	margin-top: 3em;
+}
+
+.bl_footerNav:first-of-type {
+	margin-right: 0;
+}
+
+.bl_footerNav:nth-of-type(2) {
+	margin-right: 0;
+}
+
+.ly_footer_body nav {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	display: block;
+	justify-content: space-between;
+}
+
+.bl_footerSns {
+	margin-top: 18px;
+}
+
+.ly_header_inner {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.bl_headerUtils {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+	margin-bottom: 0;
+	margin-bottom: 20px;
+}
+
+.bl_headerUtils_logo {
+	margin-left: initial;
+	width: 100px;
+}
+
+.bl_headerNav_item {
+	font-size: 1.6rem;
+	margin-bottom: 0.8em;
+}
+
+.bl_headerNav_link {
+	font-size: 1.8rem;
+}
+
+.bl_headerChildNav_item {
+	margin-right: 16px;
+}
+
+.bl_headerNav_item--language {
+	margin-top: 1em;
+}
+
 .un_Products_item_ttl {
 	font-size: 4rem;
+}
+
+.bl_top_lv2heading {
+	font-size: 3rem;
+}
+
+.un_topMv {
+	padding: 0 16px;
+}
+
+.un_topTopics_item {
+	width: 100%;
+}
+
+.un_topTopics_item img {
+	width: 100%;
+}
+
+.un_topCategory_item_ttl {
+	font-size: 1.8rem;
+	padding-left: 18px;
+}
+
+.bl_topNews_item_decoration {
+	width: 0px;
+}
+
+.bl_topNewsitem_date {
+	padding-right: 24px;
+}
+
+.bl_topAboutUs_btn {
+	padding: 20px 62px;
+}
+
+.btn-trigger::before {
+	font-size: 1.2rem;
+}
+
+.un_topSlider_item_description {
+	font-size: 3.4vw;
+	margin-top: 2em;
 }
 
 }
@@ -1855,6 +2223,122 @@ h3 {
 
 .un_Products_item_ttl {
 	font-size: 8vw;
+}
+
+.un_topCategory_item {
+	width: 100%;
+}
+
+.bl_topNews_categoryList {
+	display: block;
+}
+
+}
+
+@-webkit-keyframes bgextendAnimeBase {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@keyframes bgextendAnimeBase {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@-webkit-keyframes bgextendAnimeSecond {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes bgextendAnimeSecond {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@-webkit-keyframes bgLRextendAnime {
+
+0% {
+	-webkit-transform-origin: left;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	transform-origin: left;
+}
+
+50% {
+	-webkit-transform-origin: left;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+50.001% {
+	-webkit-transform-origin: right;
+	transform-origin: right;
+}
+
+100% {
+	-webkit-transform-origin: right;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	transform-origin: right;
+}
+
+}
+
+@keyframes bgLRextendAnime {
+
+0% {
+	-webkit-transform-origin: left;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	transform-origin: left;
+}
+
+50% {
+	-webkit-transform-origin: left;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+50.001% {
+	-webkit-transform-origin: right;
+	transform-origin: right;
+}
+
+100% {
+	-webkit-transform-origin: right;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	transform-origin: right;
 }
 
 }

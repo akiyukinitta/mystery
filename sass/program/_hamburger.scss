@@ -112,15 +112,19 @@
 	height: 36px;
 	cursor: pointer;
 	z-index: 9999;
+	margin-top: 8px;
   }
   .btn-trigger::before {
-	  content: "MENU";
-	  color: $cr-black;
-	  font-size: 1.4rem;
-position: absolute;
-top: 0%;
-left: 50%;
-transform: translate(-50%, -120%);
+	content: "MENU";
+	color: $cr-black;
+	font-size: 1.4rem;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, -120%);
+	@include mq(sm) { 
+		font-size: 1.2rem;
+	  }
   }
   .btn-trigger span {
 	position: absolute;

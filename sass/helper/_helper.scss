@@ -1,22 +1,16 @@
 @import "settings";
 
-.hp_sp-br {
-	display: block;
-}
-.hp_pc-br {
-	display: inline;
-}
 .hp_textCenter {
 	text-align: center;
 }
 
 
 .hp_spNone {
-	display: none;
+	display: none !important;
 }
 
 .hp_pcNone {
-	display: block;
+	display: block !important;
 }
 
 .hp_rowReverse {
@@ -35,19 +29,11 @@
 
 @media screen and (min-width: 768px) {
 	.hp_spNone {
-		display: block;
+		display: block !important;
 	}
 
 	.hp_pcNone {
-		display: none;
-	}
-
-	.hp_spBr {
-		display: inline;
-	}
-
-	.hp_pcBr {
-		display: block;
+		display: none !important;
 	}
 }
 
