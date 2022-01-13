@@ -1062,6 +1062,16 @@ progress {
 	display: table;
 	margin-right: 24px;
 	max-height: 28px;
+	text-align: center;
+	width: 180px;
+}
+
+.un_news_item_Tag.un_news_item_Tag--new {
+	border-left: 4px solid #C43333;
+}
+
+.un_news_item_Tag.un_news_item_Tag--info {
+	border-left: 4px solid #C4BF33;
 }
 
 .un_newsitem_date {
