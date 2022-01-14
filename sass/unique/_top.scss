@@ -50,16 +50,16 @@
 
 	// border-bottom: 1px solid #000;
 }
-.un_topTopics_list::after{
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-width: calc(100% - 32px);
-height:1px;
-background-color: $cr-black;
-margin-left: 32px;
-}
+// .un_topTopics_list::after{
+// content: "";
+// position: absolute;
+// bottom: 0;
+// left: 0;
+// width: calc(100% - 32px);
+// height:1px;
+// background-color: $cr-black;
+// margin-left: 32px;
+// }
 .un_topTopics_item_tagList{
 	
 }
