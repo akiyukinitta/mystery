@@ -19,60 +19,60 @@
 .bl_media_inner {
     background: #E8E8E8;
 }
-.ly_imgAndTxt {
+.ly_mediaImg {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.bl_mediaVisual_imgBox img {
+.bl_mediaImg_imgBox img {
     max-width: 265px;
 }
-.bl_mediaVisual_imgBox_catch {
+.bl_mediaImg_imgBox_catch {
     background: #C43333;
     color: #ffffff;
     font-size: 12px;
     text-align: center;
     padding: 3px 0;
 }
-.ly_mediaVisual_infoBox_product {
+.ly_mediaImg_txtBox_product {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 }
-.ly_mediaVisual_infoBox {
+.ly_mediaImg_txtBox {
     margin-left: 50px;
 }
-.bl_mediaVisual_infoBox_productName {
+.bl_mediaImg_txtBox_productName {
     font-size: 32px;
     margin-bottom: 0;
 }
-.bl_mediaVisual_infoBox_category {
+.bl_mediaImg_txtBox_category {
     border: 1px solid;
     margin-left: 35px;
     margin-bottom: 5px;
 }
-.bl_mediaVisual_infoBox_ttl {
+.bl_mediaImg_txtBox_ttl {
     font-size: 16px;
     color: #C43333;
 }
-.ly_mediaVisual_infoBox_ttl {
+.ly_mediaImg_txtBox_ttl {
     margin-top: 30px;
 }
-.ly_mediaVisual_infoBox_txt {
+.ly_mediaImg_txtBox_txt {
     margin-top: 10px;
 }
-.ly_mediaVisual_infoBox_moreBtn {
+.ly_mediaImg_txtBox_moreBtn {
     margin-top: 25px;
 }
-.ly_mediaVisual_infoBox_languageBtn {
+.ly_mediaImg_txtBox_languageBtn {
     margin-top: 40px;
 }
-.bl_mediaVisual_infoBox_btnWrapper {
+.bl_mediaImg_txtBox_btnWrapper {
     margin-top: 20px;
     text-align: right;
     margin-bottom: 20px;
 }
-.ly_mediaVisual_infoBox_btnWrapper1 {
+.ly_mediaImg_txtBox_btnWrapper1 {
     margin-top: -25px;
     margin-right: -50px;
 }
@@ -106,30 +106,30 @@
         border-bottom: 6px solid;
         line-height: 51px;
     }
-    .ly_imgAndTxt {
+    .ly_mediaImg {
         display: block;
     }
-    .bl_mediaVisual_imgBox_catch {
+    .bl_mediaImg_imgBox_catch {
         width: 265px;
         margin: 0 auto;
     }
-    .bl_mediaVisual_imgBox {
+    .bl_mediaImg_imgBox {
         text-align: center;
     }
-    .ly_mediaVisual_infoBox {
+    .ly_mediaImg_txtBox {
         margin-left: 0;
         padding: 10px 27px;
     }
-    .ly_mediaVisual_infoBox_ttl {
+    .ly_mediaImg_txtBox_ttl {
         margin-top: 0;
     }
-    .bl_mediaVisual_infoBox_btnWrapper {
+    .bl_mediaImg_txtBox_btnWrapper {
         text-align: center;
         margin-right: 0;
         margin-top: 60px;
     }
-    .bl_mediaVisual_infoBox_btnWrapper .bl_topAboutUs_btn {
-        padding: 20px 65px;
+    .bl_mediaImg_txtBox_btnWrapper .bl_topAboutUs_btn {
+        padding: 20px 56px;
     }
     .bl_paginationBox_pagination {
         width: 21px;

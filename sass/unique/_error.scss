@@ -1,0 +1,50 @@
+@import "settings";
+
+.ly_error {
+    margin-bottom: 90px;
+}
+.ly_sectionContents {
+    margin-top: 15px;
+}
+.ly_error_inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 25px 25px;
+}
+.ly_errorContents_inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 115px 25px 165px 25px;
+}
+.bl_error_ttl {
+    font-size: 120px;
+    border-bottom: 6px solid;
+    line-height: 93px;
+}
+.bl_error_inner {
+    background: #E8E8E8;
+}
+.ly_errorTxt {
+    text-align: center;
+}
+.bl_errorVisual_infoBox_btnWrapper {
+    text-align: center;
+    margin-top: 80px;
+}
+.bl_errorTxt_txt {
+    margin-top: 26px;
+}
+
+@media screen and (max-width: 768px) {
+    .ly_error {
+        margin-bottom: 50px;
+    }
+	.bl_error_ttl {
+        font-size: 60px;
+        border-bottom: 6px solid;
+        line-height: 51px;
+    }
+    .bl_errorVisual_infoBox_btnWrapper .bl_topAboutUs_btn {
+        padding: 20px 81px;
+    }
+}
