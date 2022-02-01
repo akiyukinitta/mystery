@@ -4,9 +4,6 @@
 
 }
 
-.ly_topTopics{
-	margin-bottom: $sec-interval;
-}
 .bl_card_list{
 	display: flex;
 	flex-wrap: wrap;
@@ -24,11 +21,12 @@
 }
 
 .bl_card_list.bl_card_list--size3{
-	margin-left: -24px;
+	// margin-left: -16px;
 }
 .bl_card_list.bl_card_list--size3 .bl_card_item{
 	width: 33%;
-	padding-left: 24px;
+	padding-left: 8px;
+padding-right: 8px;
 	@include mq(md) { 
         width: 50%;
       }

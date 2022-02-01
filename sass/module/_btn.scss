@@ -17,6 +17,9 @@
     transition-delay: 0.8s;
     transition: 0.5s;
 }
+.bl_viewMore_btn.bl_viewMore_btn--white::after{
+    background-color: #d9d9d9;
+}
 
 .bl_viewMore_btn:hover::after{
     width: 100%;
@@ -41,7 +44,9 @@
     stroke-dashoffset: 0;
     /* keyframes名 速さ 繰り返し 開始までの間隔 */
 }
-
+.bl_viewMore_btn.bl_viewMore_btn--white .bl_viewMore_btnCircleBg circle{
+    stroke: #545454;
+}
 .bl_viewMore_btnCircle{
     position: absolute;
     left: -48px;
@@ -63,6 +68,9 @@
     /* keyframes名 速さ 繰り返し 開始までの間隔 */
 }
 
+.bl_viewMore_btn.bl_viewMore_btn--white .bl_viewMore_btnCircle circle{
+    stroke: #d9d9d9;
+}
 .bl_viewMore_btn:hover .bl_viewMore_btnCircle circle {
 
     // animation: circle 2s infinite 3s;
@@ -70,7 +78,13 @@
      stroke-dashoffset: 0;
      stroke: #545454;
 }
+.bl_viewMore_btn.bl_viewMore_btn--white:hover .bl_viewMore_btnCircle circle {
 
+    // animation: circle 2s infinite 3s;
+     stroke-dasharray: 366 366;
+     stroke-dashoffset: 0;
+     stroke: #b4b4b4;
+}
 @keyframes circle {
     0% {
         stroke-dasharray: 0 366;
