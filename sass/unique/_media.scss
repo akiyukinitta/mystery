@@ -1,7 +1,7 @@
 @import "settings";
 
 .ly_media {
-    margin-bottom: 90px;
+    // margin-bottom: 90px;
 }
 .ly_sectionContents {
     margin-top: 15px;
@@ -9,7 +9,11 @@
 .ly_media_inner {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 25px 25px;
+    // padding: 25px 25px;
+    @include mq(md) { 
+        padding-left: 16px;
+        padding-right: 16px;
+              }
 }
 .bl_media_ttl {
     font-size: 120px;
@@ -21,11 +25,18 @@
 }
 .ly_mediaImg {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
+    padding: 1.5em;
+    @include mq(md) { 
+padding: 1.5em 0em;
+      }
 }
 .bl_mediaImg_imgBox img {
     max-width: 265px;
+    @include mq(md) { 
+        max-width: 100%;
+              }
 }
 .bl_mediaImg_imgBox_catch {
     background: #C43333;
@@ -33,11 +44,15 @@
     font-size: 12px;
     text-align: center;
     padding: 3px 0;
+    width: 265px;
 }
 .ly_mediaImg_txtBox_product {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    @include mq(md) { 
+        display: block;
+              }
 }
 .ly_mediaImg_txtBox {
     margin-left: 50px;
@@ -50,27 +65,40 @@
     border: 1px solid;
     margin-left: 35px;
     margin-bottom: 5px;
+    padding: 0.2em;
+    @include mq(md) { 
+        display: inline-block;
+        margin: 0;
+              }
 }
 .bl_mediaImg_txtBox_ttl {
     font-size: 16px;
     color: #C43333;
+    font-weight: bold;
 }
 .ly_mediaImg_txtBox_ttl {
-    margin-top: 30px;
+    margin-top: 1.5em;
 }
 .ly_mediaImg_txtBox_txt {
     margin-top: 10px;
 }
 .ly_mediaImg_txtBox_moreBtn {
     margin-top: 25px;
+    @include mq(md) { 
+        text-align: center;
+              }
 }
 .ly_mediaImg_txtBox_languageBtn {
     margin-top: 40px;
+    @include mq(md) { 
+        text-align: center;
+              }
 }
 .bl_mediaImg_txtBox_btnWrapper {
     margin-top: 20px;
     text-align: right;
     margin-bottom: 20px;
+    
 }
 .ly_mediaImg_txtBox_btnWrapper1 {
     // margin-top: -25px;
@@ -78,7 +106,7 @@
 }
 .ly_paginationBox {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 3em;
 }
 .ly_paginationBox_txt {
     display: flex;
@@ -87,17 +115,21 @@
 }
 .bl_paginationBox_pagination {
     border: 1px solid;
-    border-radius: 30px;
+    border-radius: 50%;
     display: block;
     width: 26px;
     margin: 0 5px;
 }
-.bl_paginationBox_pagination1 {
+.bl_paginationBox_pagination--active {
     background: #707070;
     color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    // .bl_sectionContents .ly_media_inner{
+    //     padding-left: 0;
+    //     padding-right: 0;
+    // }
     .ly_media {
         margin-bottom: 50px;
     }
@@ -110,7 +142,7 @@
         display: block;
     }
     .bl_mediaImg_imgBox_catch {
-        width: 265px;
+        // width: 265px;
         margin: 0 auto;
     }
     .bl_mediaImg_imgBox {
@@ -118,7 +150,7 @@
     }
     .ly_mediaImg_txtBox {
         margin-left: 0;
-        padding: 10px 27px;
+        padding: 10px 16px;
     }
     .ly_mediaImg_txtBox_ttl {
         margin-top: 0;
@@ -126,10 +158,12 @@
     .bl_mediaImg_txtBox_btnWrapper {
         text-align: center;
         margin-right: 0;
-        margin-top: 60px;
+        margin-top: 5em;
+
     }
     .bl_mediaImg_txtBox_btnWrapper .bl_topAboutUs_btn {
-        padding: 20px 56px;
+        padding: 20px 0px;
+        display: block;
     }
     .bl_paginationBox_pagination {
         width: 21px;

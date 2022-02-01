@@ -38,7 +38,7 @@
   
   .bl_footerNav_item {
 	flex: 1;
-	margin-bottom: 1em;
+	margin-bottom: 0.6em;
 	// @include mq(sm) { 
 	// 	width: 50vw;
 	//   }
@@ -55,7 +55,7 @@
   .bl_footerNav_link {
 	position: relative;
 	display: block;
-	padding-bottom: 4px;
+	padding-bottom: 0px;
 	color: #fff;
 	text-decoration: none;
 	border-bottom: 1px solid $cr-white;
@@ -92,7 +92,7 @@
 	  position: relative;
 	  color: $cr-white;
 	  margin-left: 1.25em;
-	  margin-top: 0.8em;
+	  margin-top: 0.45em;
 	  @include mq(sm) { 
 		margin-left: 0em;
 	  }
@@ -169,13 +169,13 @@ margin-right: 120px;
 	// display: flex;
 	color: $cr-white;
 	text-align: center;
-	margin-top: 32px;
+	margin-top: 48px;
 	@include mq(sm) { 
 margin-top: 18px;
 	  }
 }
 .bl_footerLang{
-	margin-top: 54px;
+	margin-top: 24px;
 	@include mq(md) { 
 		margin-top: 24px;
 			  }
@@ -228,7 +228,7 @@ margin-top: 18px;
   .bl_footerSns_item{
 	  display: inline-block;
 	  position: relative;
-	  max-width: 40px;
+	  max-width: 60px;
   }
 //   .bl_footerSns_item--instagram::after{
 // 	content: "";

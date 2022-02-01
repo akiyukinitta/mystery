@@ -11,6 +11,7 @@
 	display: none;
 	transition: 0.9;
 	opacity: 1;
+	overflow-y: scroll;
 	@include mq(md) { 
 overflow-y: scroll;
 	  }
@@ -37,15 +38,19 @@ overflow-y: scroll;
 
 
 .bl_headerNavWrapper nav{
+	min-width: 1024px;
 	display: flex;
+	justify-content: space-between;
 	position: absolute;
 	// right: 20%;
-	top: 8%;
+	top: 50%;
+	transform: translateY(-50%);
 left: 20%;
 opacity: 0;
 transition: 0.9;
 @include mq(md) { 
 	display: block;
+	min-width: auto;
   }
 }
 

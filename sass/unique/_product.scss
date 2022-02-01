@@ -1,3 +1,10 @@
+.ly_Products_inner{
+  @include mq(md) { 
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .un_Products_item_ttl{
     position: absolute;
     top: 50%;

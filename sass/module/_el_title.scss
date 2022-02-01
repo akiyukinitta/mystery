@@ -38,10 +38,11 @@
 .el_lv2heading--1 {
 	font-size: 6rem;
 	line-height: 1;
-	margin-bottom: func-em(40,60);
+	margin-bottom: 0.2em;
     padding: 0 6.7%;
     @include mq(md) { 
         font-size: 13vw;
+        padding-right: 0;
     }
 }
 .el_lv2headingDecoration-en{
@@ -63,4 +64,8 @@
 	line-height: 1;
 	font-size: 1.2rem;
 	padding: 1em;
+}
+
+.el_lv3headding.el_lv3headding--small{
+    font-size: 2.4rem;
 }

@@ -22,11 +22,17 @@
   // box-sizing: border-box;
   // padding-right: 24px;
 }
+.un_topSlider{
+// background-color: #000;
+}
 .un_topSlider img {
   width: 100%;
   object-fit: cover;
-  height: 39vw;
+  height: 42vw;
   // width: 100%;
+  @include mq(xl) {
+    height: 48vw;
+  }
   @include mq(lg) {
     height: 48vw;
   }
@@ -79,6 +85,9 @@
   font-size: 8rem;
   line-height: 1.2;
   font-style: italic;
+  @include mq(lg) {
+    font-size: 6.2vw;
+  }
   @include mq(md) {
     font-size: 6.2vw;
   }

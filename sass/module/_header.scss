@@ -8,7 +8,7 @@
 	background-color: #fff;
 	width: 100%;
 	top: 0;
-	box-shadow:  0px 0px 2px;
+	// box-shadow:  0px 0px 2px;
   }
 
   .ly_subheader{
@@ -63,18 +63,22 @@ padding-right: 16px;
   }
   
   .bl_headerNav {
+	  flex: 1;
 	// display: flex;
 	// justify-content: space-around;
   }
   .bl_headerNav:first-of-type {
-	margin-right: 140px;
+	// margin-right: 140px;
+	@include mq(md) { 
+margin-right: 0;
+	  }
   }
   .bl_headerNav_item {
 	flex-grow: 1;
-	margin-bottom: 2em;
+	margin-bottom: 1.2em;
 	@include mq(sm) { 
 		font-size: 1.6rem;
-		margin-bottom: 0.8em;
+		margin-bottom: 0.6em;
 	  }
   }
   
@@ -104,6 +108,10 @@ padding-right: 16px;
 	margin-left: 1.25em;
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 480px;
+	@include mq(sm) { 
+		max-width: 300px;
+	  }
   }
   .bl_headerChildNav_item{
 	//   width: 25%;
@@ -115,14 +123,25 @@ padding-right: 16px;
   .bl_headerChildNav_link{
 	  font-size: 1.8rem;
 	  white-space: nowrap;
+	  @include mq(lg) { 
+		font-size: 1.6rem;
+	  }
+	  @include mq(sm) { 
+		font-size: 1.4rem;
+	  }
   }
   .bl_headerChildNav_ttl{
 	  position: relative;
 	  margin-left: 1.25em;
 	  font-size: 1.8rem;
-	  margin-top: 1em;
+	  margin-top: 0.5em;
   }
-  .bl_headerChildNav_ttl::after{
+  .bl_headerChildNav_ttl span{
+	  position: relative;
+	  display: block;
+  }
+  /*
+  .bl_headerChildNav_ttl span::after{
 	content: "";
   position: absolute;
   top: 50%;
@@ -131,7 +150,33 @@ padding-right: 16px;
   width: 12px;
   height: 1px;
   background-color: $cr-black;
+}*/
+
+/* プラスアイコン */
+/* ２本の線を.icon-wrapの中央に並行に重ねる */
+.bl_headerChildNav_ttl span:before,
+.bl_headerChildNav_ttl span:after {
+  position: absolute;
+  content: "";
+  display: block;
+  transition: all 0.4s;
+  background: #000;
+  left: -10px;
+  top: 50%;
+  width: 12px;
+  height: 1px;
+  transform: translate(-50%, -50%);
 }
+/* そのうち1本を縦にする */
+.bl_headerChildNav_ttl span:before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* プラスアイコンクリック後、マイナスにする */
+.bl_headerChildNav_ttl span.open:before {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
 .bl_headerChildNav--language{
 	margin-top: 1em;
 }
@@ -159,4 +204,6 @@ padding-right: 16px;
 // 	background-color: #ddd;
 // 	transform: translateY(-50%);
 //   }
-  
+  .js_diff_nav{
+
+  }

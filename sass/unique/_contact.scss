@@ -1,3 +1,13 @@
+@import "settings";
+
+
+.ly_Contact_inner{
+    @include mq(md) { 
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 /*---------------------------------
   contactCommon
 ---------------------------------*/
@@ -14,8 +24,8 @@
   contactTel
 ---------------------------------*/
 .un_contactTel {
-    border-bottom: #707070 solid 1px;
-    padding-bottom: 8.2%;
+    // border-bottom: #707070 solid 1px;
+    // padding-bottom: 2em;
 }
 .un_contactTelContents_wrapper {
     background-color: #191919;
@@ -80,15 +90,15 @@
     }
 }
 .un_contactForm_contents_wrapper {
-    margin-top: 6.7%;
+    margin-top: 2em;
 }
 .un_contactForm_content_wrapper {
-    margin-top: 3.9%;
+    margin-top: 1.5em;
 }
 .un_contactForm_content_ttl {
     display: inline-block;
     font-weight: bold;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
     position: relative;
 }
 .un_contactForm_content_mandatoryTitle::after {
@@ -99,6 +109,11 @@
     position: absolute;
     right: -40px;
     top: 2px;
+}
+.un_contactForm_checkbox.un_contactForm_content_mandatoryTitle::after{
+    @media screen and (max-width: 767px) {
+          content: none;  
+    }
 }
 .un_contactForm_content_input_smallWrapper {
     display: flex;
@@ -121,6 +136,7 @@
     border-radius: 3px;
     display: inline-block;
     width: 100%;
+    padding: 0.2em 0.5em;
 }
 .un_contactForm_content_input_confirmWrapper {
     display: flex;
