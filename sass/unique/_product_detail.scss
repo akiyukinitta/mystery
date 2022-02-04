@@ -11,7 +11,12 @@
 }
 .un_ProductDetail_thumb{
   position: relative;
+  img{
+    max-height: 218px;
+    object-fit: cover;
+  }
 }
+
 .un_ProductDetail_status{
   position: absolute;
 bottom: 0;
@@ -20,19 +25,23 @@ bottom: 0;
   color: $cr-white;
   padding: 0.2em 1em;
 }
+.un_ProductDetail_description{
+  font-size: 1.4rem;
+}
 .un_ProductDetail_text{
-  padding: 1em 1em;
-min-height: 280px;
+  padding: 0.75em;
+min-height: 200px;
 @include mq(md) { 
   min-height: 200px;
 }
 }
 
 .un_ProductDetail_item_ttl{
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   letter-spacing: 0.05em;
   margin-bottom: 0;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 .un_ProductDetail_label{
@@ -42,14 +51,15 @@ min-height: 280px;
   background: linear-gradient(90deg, rgba(65,196,51,1) 0%, rgba(255,255,255,1) 100%);
   // background-color: #41c433;
   color: #fff;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 0.8em;
 }
 
 .un_ProductDetail_tagList{
   display: flex;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   min-height: 1.5em;
+  font-size: 1.5rem;
 }
 .un_ProductDetail_tagItem{
   padding-right: 1em;

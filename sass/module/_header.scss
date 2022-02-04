@@ -46,7 +46,7 @@ padding-right: 16px;
   
   .bl_headerUtils_logo {
 	width: 150px;
-
+	margin-top: -16px;
 	@include mq(sm) { 
 		width: 100px;
 		margin-left: initial;
