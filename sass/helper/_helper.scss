@@ -24,7 +24,13 @@
 .hp_textLeft {
 	text-align: left;
 }
-
+.hp_noWrap{
+	white-space: nowrap;
+}
+.hp_noLRPadding{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
 
 
 @media screen and (min-width: 768px) {
