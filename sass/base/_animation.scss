@@ -87,8 +87,9 @@ opacity: 0.8;
     content: "";
     position: absolute;
     width: 100%;
-    height: 40%;
-	top: 20%;
+    height: 20%;
+	top: 25%;
+	// transform: translateY(-50%);
     background-color: #666;/*伸びる背景色の設定*/
 }
 @keyframes bgLRextendAnime{
