@@ -24,7 +24,8 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: #ffffff;
-    font-size: 73px;
+    font-size: 100px;
+    white-space: nowrap
 }
 .bl_sectionLeadBox {
 	font-size: 60px;
@@ -59,9 +60,11 @@
     align-items: flex-end;
     flex-wrap: wrap;
 }
-.bl_sectionLead_imgbox a{
-    display: block;
-    padding: 4px 4px;
+.bl_sectionLead_imgbox_img {
+    width: 20%;
+}
+.bl_sectionLead_imgbox_img img{
+    width: 100%;
 }
 .ly_sectionCont {
     margin-top: 112px;
@@ -135,29 +138,30 @@
     display: none;
 }
 .modaal-container{
-    max-width: 20%;
-    background: #191919;
+    background: #19191980 !important;
+    width: 30% !important;
 }
 .modaal-content-container {
     text-align: center;
 }
 .modaal-content-container img {
-    width: 50%;
+    width: 100%;
+}
+@media screen and (max-width: 575px) {
+    .modaal-content-container img {
+        width: 100%;
+    }
+    .modaal-container{
+        width: 100% !important;
+    }
 }
 // start_open
 
 
 
-@media screen and (max-width: 575px) {
-    .modaal-content-container img {
-        width: 75%;
-    }
-}
+
 
 @media screen and (max-width: 768px) {
-    .bl_mainVIsual_imgBox_ttl {
-        font-size: 52px;
-    }
     .bl_sectionLeadBox {
         font-size:38px;
         line-height: 1.4;
@@ -168,7 +172,9 @@
     .bl_sectionLeadBox_brand {
         font-size: 18px;
     }
-
+    .bl_sectionLead_imgbox_img {
+        width: 33%;
+    }
     .bl_sectionGallery_imgBox_img {
         width: 33%;
     }
@@ -191,7 +197,7 @@
 
 @media screen and (max-width: 575px) {
     .bl_mainVIsual_imgBox_ttl {
-        font-size: 40px;
+        font-size: 38px;
         line-height: 52px;
     }
     .bl_sectionCont_ttl::after {
