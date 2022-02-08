@@ -29,8 +29,9 @@ bottom: 0;
   font-size: 1.4rem;
 }
 .un_ProductDetail_text{
-  padding: 0.75em;
+  padding: 0.75em 0.75em 0.4em;
 min-height: 200px;
+text-align: justify;
 @include mq(md) { 
   min-height: 200px;
 }
