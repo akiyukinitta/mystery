@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1.5em;
+    padding: 1.5em 1.5em 2em;
     @include mq(md) { 
 padding: 1.5em 0em;
       }
@@ -124,7 +124,25 @@ padding: 1.5em 0em;
     background: #707070;
     color: #ffffff;
 }
+.bl_mediaProduct_btn{
+	background-color: $cr-black;
+	color: $cr-white;
+	// padding: 20px 112px;
+	padding: 4px 64px;
+	transition: 0.8s;
+	@include mq(sm) {
+		padding: 4px 62px;
+		// padding: 20px 62px;
+	  }
+}
 
+.bl_mediaProduct_btn:hover{
+	opacity: 0.8;
+	background-color: $cr-white;
+	color: $cr-black;
+	// padding-top: 0;
+	// padding-bottom: 0;
+}
 @media screen and (max-width: 767px) {
     // .bl_sectionContents .ly_media_inner{
     //     padding-left: 0;

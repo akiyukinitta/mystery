@@ -34,3 +34,11 @@ padding-right: 8px;
         width: 100%;
       }
 }
+
+.bl_flexContainer{
+	display: flex;
+	justify-content: space-between;
+}
+.bl_flexContainer--alignCenter{
+align-items: center;
+}
