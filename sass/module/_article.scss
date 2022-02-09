@@ -1,0 +1,19 @@
+@import "settings";
+
+.bl_article{
+    background-color: #E8E8E8;
+    padding: 1.5em;
+}
+.bl_article_container{
+    display: flex;
+}
+.bl_article_thumbWrapper{
+    flex: 1;
+}
+.bl_article_contents{
+    flex: 2;
+}
+.bl_article_header{
+    display: flex;
+    justify-content: space-between;
+}
