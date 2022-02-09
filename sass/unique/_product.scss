@@ -46,9 +46,12 @@ line-height: 1;
     margin-bottom: 0.8em;
     line-height: 1;
     margin-top: 1em;
+    @media screen and (max-width: 1600px) {
+      font-size: 84px;
+    }
     
     @include mq(md) { 
-        margin-top: 2em;
+        margin-top: 80px;
         font-size: 15vw;
       }
       
@@ -57,11 +60,12 @@ line-height: 1;
     content: "";
     position: absolute;
     bottom: 0;
-    transform: translateY(-12px);
+    transform: translateY(-7px);
     left: 6px;
     width: calc(100% - 18px);
     height: 5px;
     background-color: #3c3c3c;
+    
     @include mq(md) {
         width: 100%;
         left: 0; 

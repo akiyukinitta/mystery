@@ -326,10 +326,12 @@ margin-top: func-em(62,16);
 .bl_topAboutUs_btn{
 	background-color: $cr-black;
 	color: $cr-white;
-	padding: 20px 112px;
+	// padding: 20px 112px;
+	padding: 0px 112px;
 	transition: 0.8s;
 	@include mq(sm) {
-		padding: 20px 62px;
+		padding: 0px 62px;
+		// padding: 20px 62px;
 	  }
 }
 
@@ -337,4 +339,12 @@ margin-top: func-em(62,16);
 	opacity: 0.8;
 	background-color: $cr-white;
 	color: $cr-black;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.bl_topAboutUs_btn-2{
+	border-bottom: 1px solid #fafafa;
+	padding-bottom: 0.5em;
+	color: #fafafa;
+	font-size: 2.4rem;
 }

@@ -46,7 +46,7 @@ padding-right: 16px;
   
   .bl_headerUtils_logo {
 	width: 150px;
-
+	margin-top: -16px;
 	@include mq(sm) { 
 		width: 100px;
 		margin-left: initial;
@@ -75,7 +75,7 @@ margin-right: 0;
   }
   .bl_headerNav_item {
 	flex-grow: 1;
-	margin-bottom: 1.2em;
+	margin-bottom: 1em;
 	@include mq(sm) { 
 		font-size: 1.6rem;
 		margin-bottom: 0.6em;
