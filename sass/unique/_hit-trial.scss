@@ -7,7 +7,7 @@
   .un_trialScheduleTable table {
     width: 100%;
     text-align: center;
-    table-layout: fixed;
+   //table-layout: fixed;
     border-collapse: collapse;
   }
   
@@ -20,7 +20,9 @@
     font-weight: bold;
     vertical-align: middle;
   }
-  
+  .un_trialScheduleTable tbody th{
+    width: 10%;
+  }
   .un_trialScheduleTable td {
     padding: 15px;
     border-right: 1px solid #ddd;
@@ -37,8 +39,19 @@
   .un_trialScheduleTable tbody tr:last-child td {
     border-bottom-width: 0;
   }
-  
-  @media screen and (max-width: 768px) {
+  .bl_trial_lv2heading{
+    margin-bottom: 0.5em;
+  }
+  .bl_trialSchedule_update{
+    font-size: 2.8rem;
+    margin-bottom: 0.5em;
+  }
+
+.ly_report{
+  margin-top: 6em;
+}
+
+  @media screen and (max-width: 767px) {
     .un_trialScheduleTable {
       border-right-width: 0;
       overflow-x: auto;

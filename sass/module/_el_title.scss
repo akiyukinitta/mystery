@@ -45,6 +45,10 @@
         padding-right: 0;
     }
 }
+.el_lv1heading--ja.el_lv1heading--1::after{
+    transform: translateY(-6px);
+}
+
 .el_lv2headingDecoration-en{
     display: block;
     position: relative;
