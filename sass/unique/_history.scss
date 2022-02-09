@@ -1,5 +1,142 @@
 @import "settings";
 
+.ly_sectionHistory {
+    margin-top: 45px;
+}
+.bl_sectionCont_ttlBox_ttl {
+    font-size: 60px;
+    margin-left: 84px;
+}
+.bl_sectionCont_ttlBox_ttl::before {
+    content: '';
+    border-bottom: 1px solid #707070;
+    position: absolute;
+    width: 78px;
+    top: 44%;
+    left: 16%;
+}
+.ly_sectionCont_table {
+    margin-top: 50px;
+}
+.bl_sectionCont_table_date {
+    border: 1px solid #707070;
+    padding: 5px 15px;
+    font-size: 24px;
+}
+.bl_sectionCont_table_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.bl_sectionCont_table_item {
+    margin-right: 24px;
+    margin-top: 20px;
+}
+.bl_sectionCont_table_txt {
+    margin-top: 15px;
+}
+.bl_sectionCont_table_date {
+    margin-top: 24px;
+    position: relative;
+}
+
+/* プラスアイコン */
+/* ２本の線を.icon-wrapの中央に並行に重ねる */
+.bl_sectionCont_table_date span:before,
+.bl_sectionCont_table_date span:after {
+  position: absolute;
+  content: "";
+  display: block;
+  transition: all 0.4s;
+  background: #000;
+  right: 1%;
+  top: 50%;
+  width: 12px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+/* そのうち1本を縦にする */
+.bl_sectionCont_table_date span:before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* プラスアイコンクリック後、マイナスにする */
+.bl_sectionCont_table_date.open:before {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+// .bl_sectionCont_table_date::before {
+//     background: #000;
+//     content: "";
+//     display: block;
+//     height: 1px;
+//     right: 1%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: all 0.4s;
+//     width: 12px;
+// }
+// .bl_sectionCont_table_date::after {
+//     background: #000;
+//     content: "";
+//     display: block;
+//     height: 1px;
+//     right: 1%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: all 0.4s;
+//     width: 12px;
+// }
+// .bl_sectionCont_table_date span:before {
+//     transform: translate(-50%, -50%) rotate(90deg);
+// }
+
+
+
+
+
+// start_open
+#history2018_img1,#history2018_img2,#history2018_img3,#history2018_img4,#history2018_img5 {
+    display: none;
+}
+#history2017_img1,#history2017_img2,#history2017_img3,#history2017_img4,#history2017_img5 {
+    display: none;
+}
+#history2016_img1,#history2015_img1,#history2015_img2,#history2015_img3,#history2014_img1,#history2014_img2 {
+    display: none;
+}
+.modaal-container{
+    background: #19191980 !important;
+    width: 30% !important;
+}
+.modaal-content-container {
+    text-align: center;
+}
+.modaal-content-container img {
+    width: 100%;
+}
+@media screen and (max-width: 575px) {
+    .modaal-content-container img {
+        width: 100%;
+    }
+    .modaal-container{
+        width: 100% !important;
+    }
+}
+// start_open
+
+
+
+
+
+
+
+
+
+
+
+
 .ly_item {
     margin-top: 100px;
 }
