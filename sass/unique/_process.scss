@@ -1,0 +1,80 @@
+@import "settings";
+
+// 動画
+.un_movie {
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+// 動画のレスポンシブ対応
+.un_movie_responsive {
+    width: 90%;
+    height: 100%;
+}
+
+// 動画の下のテキスト
+.un_movie_text {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 20px;
+}
+
+// 768px以上の時
+@media screen and (min-width: 768px) {
+    .un_process_container {
+        border: solid 1px;
+        padding: 2.5% 6.7%;
+        display: flex;
+    }
+}
+// 768px以下の時
+@media screen and (max-width: 768px) {
+    .un_process_container {
+        border: solid 1px;
+        padding: 2.5% 6.7%;
+    }
+}
+
+.un_process_title {
+    font-size: 20px;
+}
+
+.un_process_list {
+    padding-top: 2%;
+}
+
+// 画像の大きさ設定
+// 768px以上の時
+@media screen and (min-width: 768px) {
+    .un_process_polish_image {
+        max-width: 290px;
+    }
+}
+
+// 768px以上の時
+@media screen and (min-width: 768px) {
+    .un_process_box {
+        width: 50%;
+    }
+}
+// 768px以下の時
+@media screen and (max-width: 768px) {
+    .un_process_box {
+        width: 100%;
+    }
+}
+
+/* -- 2行目の画像 -- */
+// 768px以上の時
+@media screen and (min-width: 768px) {
+    .un_image_interval {
+        margin-left: 10px;
+    }
+
+    .un_process_polish_image_row_02 {
+        display: flex;
+        margin-left: -95px;
+        margin-top: 10px;
+    }
+}
