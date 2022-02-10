@@ -1,6 +1,6 @@
 @import "settings";
 
-.ly_ProductDetail_inner{
+.ly_ProductList_inner{
   @include mq(md) { 
     padding-left: 16px;
     padding-right: 16px;
@@ -9,7 +9,7 @@
 .bl_card_item_inner{
   box-shadow: 1px 1px 4px #eee;
 }
-.un_ProductDetail_thumb{
+.un_ProductList_thumb{
   position: relative;
   img{
     max-height: 218px;
@@ -17,7 +17,7 @@
   }
 }
 
-.un_ProductDetail_status{
+.un_ProductList_status{
   position: absolute;
 bottom: 0;
   left: 0;
@@ -25,7 +25,7 @@ bottom: 0;
   color: $cr-white;
   padding: 0.2em 1em;
 }
-.un_ProductDetail_description{
+.un_ProductList_description{
   font-size: 1.4rem;
 }
 .un_ProductDetail_text{
@@ -37,7 +37,7 @@ text-align: justify;
 }
 }
 
-.un_ProductDetail_item_ttl{
+.un_ProductList_item_ttl{
   font-size: 2.6rem;
   letter-spacing: 0.05em;
   margin-bottom: 0;
@@ -45,7 +45,7 @@ text-align: justify;
   line-height: 1.4;
 }
 
-.un_ProductDetail_label{
+.un_ProductList_label{
   padding: 0.2em 1em;
   // display: inline-block;
   background: rgb(65,196,51);
@@ -56,28 +56,28 @@ text-align: justify;
   font-size: 0.8em;
 }
 
-.un_ProductDetail_tagList{
+.un_ProductList_tagList{
   display: flex;
   margin-bottom: 0.5em;
   min-height: 1.5em;
   font-size: 1.5rem;
 }
-.un_ProductDetail_tagItem{
+.un_ProductList_tagItem{
   padding-right: 1em;
   font-style: italic;
 }
-.un_ProductDetail_tagItem--laser{
+.un_ProductList_tagItem--laser{
 	// color: transparent;
 	// background: repeating-linear-gradient( 90deg, #4169e1 0 50%, #90CAF9 50% 100% );
 	// -webkit-background-clip: text;
 }
-.ly_ProductDetail .el_lv2heading--1{
+.ly_ProductList .el_lv2heading--1{
 margin-top: 0.5em;
 @include mq(md) { 
   font-size: 3rem;
 }
 }
 
-.ly_ProductDetail .el_lv2heading--1:first-of-type{
+.ly_ProductList .el_lv2heading--1:first-of-type{
   margin-top: 0.5em;
   }

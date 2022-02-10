@@ -1,0 +1,116 @@
+@import "settings";
+
+.ly_sectionHistory {
+    margin-top: 45px;
+}
+
+.ly_history_table {
+    margin-top: 50px;
+}
+.un_history_product_date {
+    border: 1px solid #707070;
+    padding: 5px 15px;
+    font-size: 24px;
+}
+.un_history_productList {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.un_history_productItem {
+    margin-right: 24px;
+    margin-top: 20px;
+}
+.un_history_product_notion {
+    margin-top: 15px;
+}
+.un_history_product_date {
+    margin-top: 24px;
+    position: relative;
+}
+
+/* プラスアイコン */
+/* ２本の線を.icon-wrapの中央に並行に重ねる */
+.un_history_product_date span:before,
+.un_history_product_date span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    transition: all 0.4s;
+    background: #000;
+    right: 1%;
+    top: 50%;
+    width: 12px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+}
+/* そのうち1本を縦にする */
+.un_history_product_date span:before {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* プラスアイコンクリック後、マイナスにする */
+.un_history_product_date.open:before {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+// .un_history_product_date::before {
+//     background: #000;
+//     content: "";
+//     display: block;
+//     height: 1px;
+//     right: 1%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: all 0.4s;
+//     width: 12px;
+// }
+// .un_history_product_date::after {
+//     background: #000;
+//     content: "";
+//     display: block;
+//     height: 1px;
+//     right: 1%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: all 0.4s;
+//     width: 12px;
+// }
+// .un_history_product_date span:before {
+//     transform: translate(-50%, -50%) rotate(90deg);
+// }
+
+// start_open
+#history2018_img1,
+#history2018_img2,
+#history2018_img3,
+#history2018_img4,
+#history2018_img5 {
+    display: none;
+}
+#history2017_img1,
+#history2017_img2,
+#history2017_img3,
+#history2017_img4,
+#history2017_img5 {
+    display: none;
+}
+#history2016_img1,
+#history2015_img1,
+#history2015_img2,
+#history2015_img3,
+#history2014_img1,
+#history2014_img2 {
+    display: none;
+}
+#history2013_img1,
+#history2013_img2,
+#history2013_img3,
+#history2013_img4,
+#history2013_img5,
+#history2013_img6 {
+    display: none;
+}
+
+// start_open

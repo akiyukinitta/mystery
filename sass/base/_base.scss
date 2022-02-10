@@ -8,7 +8,7 @@
 
 html {
 	font-size: 62.5%;
-	overflow: auto;
+	overflow: auto !important;
 }
 
 html,
@@ -99,7 +99,7 @@ button:focus {
 .ly_inner{
     max-width: 1040px;
     margin: 0 auto;
-	@include mq(lg) { 
+	@include mq(xl) { 
 padding-left: 16px;
 padding-right: 16px;
     }
